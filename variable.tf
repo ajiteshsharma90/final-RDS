@@ -11,7 +11,7 @@ variable "aws_secret_key" {
 }
 
 variable "aws_region" {
-  default = "us-west-2"
+  default = "secret.aws_region"
   description = "Region"
   type = string
 }
