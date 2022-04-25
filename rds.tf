@@ -2,8 +2,11 @@ resource "aws_secretsmanager_secret" "my_password_secret" {
   name = "/dev/mysql"
 }
 
-data "aws_secretsmanager_secret" "creds" {
+data "aws_secretsmanager_secret" "username" {
   name = "username"
+}
+
+data "aws_secretsmanager_secret" "password" {
   name = "password"
 }
 
