@@ -19,6 +19,6 @@ engine_version = "5.7"
 instance_class = "db.m4.large"
 name = "test"
 username = local.db_creds.username
-password = data.aws_secretsmanager_secret.password
-parameter_group_name = local.db_creds.password
+password = local.db_creds.password
+parameter_group_name = "default.mysql5.7"
 }
