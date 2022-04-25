@@ -1,13 +1,12 @@
-resource "aws_secretsmanager_secret" "my_password_secret" {
-  name = "/dev/mysql"
+data "aws_secretsmanager_secret_version" "creds" {
+  # Fill in the name you gave to your secret
+  secret_id = "db-creds"
 }
 
-data "aws_secretsmanager_secret" "username" {
-  secret_username = aws_secretsmanager_secret.my_password_secret.username
-}
-
-data "aws_secretsmanager_secret" "password" {
-  secret_password = aws_secretsmanager_secret.my_password_secret.password
+locals {
+  db_creds = jsondecode(
+    data.aws_secretsmanager_secret_version.creds.secret_string
+  )
 }
 
 
@@ -19,7 +18,7 @@ engine = "mysql"
 engine_version = "5.7"
 instance_class = "db.m4.large"
 name = "test"
-username = data.aws_secretsmanager_secret.username
+username = local.db_creds.username
 password = data.aws_secretsmanager_secret.password
-parameter_group_name = "default.mysql5.7"
+parameter_group_name = local.db_creds.password
 }
