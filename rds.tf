@@ -3,11 +3,11 @@ resource "aws_secretsmanager_secret" "my_password_secret" {
 }
 
 data "aws_secretsmanager_secret" "username" {
-  name = "username"
+  secret_username = aws_secretsmanager_secret.my_password_secret.username
 }
 
 data "aws_secretsmanager_secret" "password" {
-  name = "password"
+  secret_password = aws_secretsmanager_secret.my_password_secret.password
 }
 
 
