@@ -9,6 +9,11 @@ locals {
   )
 }
 
+module "rds" {
+  source  = "terraform-aws-modules/rds/aws"
+  version = "4.3.0"
+}
+
 
 resource "aws_db_instance" "default" {
 allocated_storage = 20
