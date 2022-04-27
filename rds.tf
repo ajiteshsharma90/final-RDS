@@ -16,6 +16,7 @@ resource "aws_db_instance" "default" {
   engine               = "sqlserver-se"
   engine_version       = "15.00.4153.1.v1"
   instance_class       = "db.r5.xlarge"
+  license_model             = "license-included"
   #name = "test4"
   username = local.db_creds.username
   password = local.db_creds.password
