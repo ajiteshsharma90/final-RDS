@@ -19,5 +19,5 @@ resource "aws_db_instance" "default" {
   #name = "test4"
   username = local.db_creds.username
   password = local.db_creds.password
-  parameter_group_name = "default.sqlserver-ex15.0"
+  parameter_group_name = "sqlserver-ex-15.0"
 }
