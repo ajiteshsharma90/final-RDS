@@ -12,7 +12,7 @@ locals {
 
 resource "aws_db_instance" "default" {
 allocated_storage = 20
-identifier = "testinstance2"
+identifier = "testinstance3"
 storage_type = "gp2"
 engine = "sqlserver-ex"
 engine_version = "14.00.3401.1.v1"
