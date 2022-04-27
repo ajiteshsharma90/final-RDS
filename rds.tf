@@ -20,5 +20,5 @@ instance_class = "db.r5.xlarge"
 name = "test4"
 username = local.db_creds.username
 password = local.db_creds.password
-parameter_group_name = "default.sqlserver-ex14.0"
+parameter_group_name = "default.sqlserver-ex15.0"
 }
