@@ -13,11 +13,11 @@ locals {
 resource "aws_db_instance" "default" {
   allocated_storage = 20
   identifier = "testinstance3"
-  engine               = "sqlserver-ex"
-  engine_version       = "15.00.4153.1.v1"
-  instance_class       = "db.t3.large"
+  engine               = "sqlserver-se"
+  engine_version       = "14.00.3401.1.v1"
+  instance_class       = "db.r5.xlarge"
   #name = "test4"
   username = local.db_creds.username
   password = local.db_creds.password
-  parameter_group_name = "sqlserver-ex-15.0"
+  parameter_group_name = "default.sqlserver-se-14.0"
 }
