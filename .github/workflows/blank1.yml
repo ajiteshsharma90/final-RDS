@@ -11,8 +11,8 @@ jobs:
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }} 
       AWS_SECRET_ACCESS_KEY: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
-      TF_VAR_my_username: ${{ secrets.AWS_USERNAME }}
-      TF_VAR_my_password: ${{ secrets.AWS_PASSWORD }}
+      TF_VAR_DB_USER_NAME: ${{ secrets.DB_USER_NAME }}
+      TF_VAR_DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
 
     defaults:
       run:
