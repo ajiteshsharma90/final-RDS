@@ -5,5 +5,3 @@ variable "aws_region" {
 }
 variable "my_username" {}
 variable "my_password" {}
-variable "access_key" {}
-variable "secret_key" {}
