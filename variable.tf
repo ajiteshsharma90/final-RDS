@@ -3,5 +3,5 @@ variable "aws_region" {
   description = "Region"
   type = string
 }
-variable "my_username" {}
-variable "my_password" {}
+variable "DB_USER_NAME" {}
+variable "DB_PASSWORD" {}
