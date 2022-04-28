@@ -18,7 +18,7 @@ resource "aws_db_instance" "default" {
   instance_class       = "db.r5.xlarge"
   license_model             = "license-included"
   #name = "test4"
-  username = var.my_username
-  password = var.my_password
+  username = var.DB_USER_NAME
+  password = var.DB_PASSWORD
   parameter_group_name = "default.sqlserver-se-15.0"
 }
