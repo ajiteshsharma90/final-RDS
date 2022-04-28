@@ -9,3 +9,6 @@ variable "DB_USER_NAME" {
 variable "DB_PASSWORD" {
   type = string
 }
+variable "VPC_ID" {
+  type = string 
+}
