@@ -1,6 +1,12 @@
-resource "aws_subnet" "private-subnet44" {
+resource "aws_subnet" "private-subnet45" {
 #vpc_id = "${aws_vpc.main.id}"
- vpc_id = "vpc-00137218a9c55fdaa"
- cidr_block = "10.0.2.0/24"
+ vpc_id = var.vpc_id
+ cidr_block = "10.0.3.0/24"
  availability_zone = "us-west-2a"
+}
+resource "aws_subnet" "private-subnet46" {
+#vpc_id = "${aws_vpc.main.id}"
+ vpc_id = var.vpc_id
+ cidr_block = "10.0.4.0/24"
+ availability_zone = "us-west-2b"
 }
